@@ -26,7 +26,7 @@ $(document).ready(function () {
       method: 'POST',
       cache: false,
       contentType: 'application/json',
-      data: data,
+      data: JSON.stringify(data),
       success: (data) => {
         $email.text("Thank you");
         Ladda.stopAll();
