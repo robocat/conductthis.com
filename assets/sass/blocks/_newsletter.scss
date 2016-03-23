@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
+  text-align: center;
 
   @include e(description) {
     margin-top: 50px;
@@ -42,5 +43,10 @@
     &:disabled {
       opacity: 0.6;
     }
+  }
+
+  @include e(thanks) {
+    display: none;
+    margin-top: 30px;
   }
 }

@@ -25,10 +25,11 @@ $(document).ready(function () {
       url: url,
       method: 'POST',
       cache: false,
-      contentType: 'application/json',
-      data: JSON.stringify(data),
+      // contentType: 'application/json',
+      data: data,
       success: (data) => {
-        $email.text("Thank you");
+        $("#newsletter_form").hide();
+        $("#newsletter_thanks").show();
         Ladda.stopAll();
       },
       error: (xhr, status, error) => {
