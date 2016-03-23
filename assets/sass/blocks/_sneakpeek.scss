@@ -2,8 +2,7 @@
   align-items: flex-end;
   justify-content: center;
   flex-flow: row nowrap;
-  position: fixed;
-  bottom: 0;
+  padding-top: 40px;
   width: 100%;
 
   @include e(image) {
@@ -14,11 +13,11 @@
   }
 }
 
-// @media only screen and ((max-height: 1000px) or (max-device-height: 680px)) {
-//   @include b(sneakpeek) {
-//     position: relative;
-//     bottom: auto;
-//     width: 100%;
-//     padding-top: 40px;
-//   }
-// }
+@mixin responsive {
+  @include b(sneakpeek) {
+    position: relative;
+    bottom: auto;
+    width: 100%;
+    padding-top: 40px;
+  }
+}
