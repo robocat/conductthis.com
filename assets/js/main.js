@@ -28,11 +28,11 @@ $(document).ready(function () {
       contentType: 'application/json',
       data: data,
       success: (data) => {
-        $emailField.text("Thank you");
+        $email.text("Thank you");
         Ladda.stopAll();
       },
       error: (xhr, status, error) => {
-        $emailField.prop('disabled', false);
+        $email.prop('disabled', false);
         Ladda.stopAll();
       }
     });
