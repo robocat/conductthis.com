@@ -12,13 +12,18 @@ import newer from 'gulp-newer';
 import sass from 'gulp-sass';
 import imagemin from 'gulp-imagemin';
 
+import babelify from 'babelify';
+import watchify from 'watchify';
+import browserify from 'browserify';
+import exorcist from 'exorcist';
+import source from 'vinyl-source-stream';
+import gutil from 'gulp-util';
+
 import handlebars from 'gulp-compile-handlebars';
 import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'gulp-autoprefixer';
 
 import bs from 'browser-sync';
-
-const browserSync = bs.create();
 
 const site = {
   title: 'Conduct this',
@@ -37,11 +42,58 @@ const config = {
     html: 'index.handlebars',
     partials: './assets/templates/**/*.handlebars',
     images: './assets/images/**/*.{png,jpg,gif,svg}',
-    sass: './assets/sass/**/*.{scss,sass}'
+    sass: './assets/sass/**/*.{scss,sass}',
+    js: './assets/js/main.js'
   },
   production: false,
+  watching: false,
   retina_suffix: '_2x'
 };
+
+function configure_bundler() {
+  let bundler = null;
+
+  const browserify_opts = {
+    entries: ['./assets/js/main.js'],
+    debug: !config.production
+  };
+
+  if (config.watching) {
+    watchify.args.debug = true;
+    bundler = watchify(browserify(browserify_opts, watchify.args));
+  } else {
+    bundler = browserify(browserify_opts);
+  }
+
+  let rebundle = () => {
+    bundle(bundler);
+  };
+
+  bundler.on('update', () => {
+    gutil.log('Rebundling');
+    rebundle();
+  });
+
+  rebundle();
+}
+
+function bundle(bundler) {
+  gutil.log('Bundling javascript');
+
+  return bundler.bundle()
+    .on('error', function(err) {
+      gutil.log(err.message);
+      browserSync.notify('Bundle error!');
+      this.emit('end');
+    })
+    // .pipe(exorcist(`${config.build}/js/bundle.js.map`))
+    .pipe(source('main.js'))
+    .pipe(rename('bundle.js'))
+    .pipe(gulp.dest(`${config.build}/js/`))
+    .pipe(gif(config.watching, browserSync.stream({once: true})));
+}
+
+const browserSync = bs.create();
 
 function retina_path(path) {
   const components = path.split('.');
@@ -85,7 +137,8 @@ gulp.task('sass', () => {
   const options = {
     imagePath: '/images',
     includePaths: [
-      './node_modules/normalize.css'
+      './node_modules/normalize.css',
+      './node_modules/ladda/css'
     ]
   };
 
@@ -162,10 +215,17 @@ gulp.task('set-production', () => {
   config.production = true;
 });
 
-gulp.task('build', ['html', 'images', 'sass']);
+gulp.task('bundle', () => {
+  return configure_bundler();
+});
+
+gulp.task('build', ['html', 'images', 'sass', 'bundle']);
 gulp.task('production', ['set-production', 'build'])
 
 gulp.task('watch', ['sync'], () => {
+  config.watching = true;
+  configure_bundler();
+
   gulp.watch(config.paths.html, ['html']);
   gulp.watch(config.paths.partials, ['html']);
   gulp.watch(config.paths.images, ['images']);

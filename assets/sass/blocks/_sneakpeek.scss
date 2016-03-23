@@ -14,11 +14,11 @@
   }
 }
 
-@media only screen and ((max-height: 1000px) or (max-device-height: 680px)) {
-  @include b(sneakpeek) {
-    position: relative;
-    bottom: auto;
-    width: 100%;
-    padding-top: 40px;
-  }
-}
+// @media only screen and ((max-height: 1000px) or (max-device-height: 680px)) {
+//   @include b(sneakpeek) {
+//     position: relative;
+//     bottom: auto;
+//     width: 100%;
+//     padding-top: 40px;
+//   }
+// }
