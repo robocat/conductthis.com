@@ -1,0 +1,29 @@
+{{> header }}
+
+<div class="header">
+	{{{img "logo.png" "header__logo"}}}
+</div>
+
+<div class="info">
+	<div class="info__description">
+		We're making a game! It's about trains, ok? The rest we're still figuring out.<br>
+		Watch us make it and <a href="mailto:hello@robo.cat">stay in touch</a>.
+	</div>
+
+	<div class="info__video"></div>
+</div>
+
+<div class="newsletter">
+	<div class="newsletter__description">Choo choo choose us. Lets keep you updated.</div>
+
+	<form class="newsletter__form" id="newsletter_form">
+		<input class="newsletter__email" type="email" name="email" value="" placeholder="you@your-email.com">
+		<button class="newsletter__submit ladda-button" type="submit" data-style="expand-right"><span class="ladda-label">Yes!</span></button>
+	</form>
+</div>
+
+<div class="sneakpeek">
+	{{{img "sneakpeek.png" "sneakpeek__image"}}}
+</div>
+
+{{> footer }}

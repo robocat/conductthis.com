@@ -1,0 +1,42 @@
+@include b(newsletter) {
+  @include flex_container;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+
+  @include e(description) {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  @include e(form) {
+    display: flex;
+    margin-top: 30px;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+
+  @include e(submit) {
+    margin-left: 5px;
+
+    border: none;
+    border-radius: 5px;
+    background-color: $color_action_background;
+    color: $color_action_foreground;
+    font-weight: bold;
+
+    padding: 10px 20px;
+
+    &:hover {
+      background-color: darken($color_action_background, 10%);
+    }
+  }
+
+  @include e(email) {
+    border: none;
+    border-radius: 5px;
+
+    padding: 10px;
+    min-width: 240px;
+  }
+}

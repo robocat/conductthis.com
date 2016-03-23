@@ -1,0 +1,14 @@
+@include b(info) {
+  @include flex_container;
+  justify-content: center;
+  flex-flow: row nowrap;
+  padding: 0 20px;
+
+  @include e(description) {
+    margin-top: 50px;
+
+    @include rem(font-size, 2.0rem);
+    @include rem(line-height, 2.6rem);
+    text-align: center;
+  }
+}
