@@ -4,6 +4,7 @@
   flex-flow: row nowrap;
   max-width: 980px;
   padding: 0 20px;
+  text-align: center;
 
   @include e(description) {
     margin-top: 50px;
@@ -11,6 +12,30 @@
     @include rem(font-size, 2.0rem);
     @include rem(line-height, 2.6rem);
     text-align: center;
+  }
+
+  @include e(hand) {
+    display: inline-block;
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 5px;
+    background-color: $color_ct_blue_light;
+    color: $color_ct_blue_deep;
+    font-weight: bold;
+    text-decoration: none;
+
+    padding: 15px 30px 15px 70px;
+
+    background-image: url('/images/fb-hand_2x.png');
+    background-position: 15px 50%;
+    background-size: 43px 37px;
+    background-repeat: no-repeat;
+
+    &:hover {
+      color: $color_ct_blue_deep;
+      background-color: lighten($color_ct_blue_light, 10%);
+    }
   }
 
   @include e(video) {

@@ -14,7 +14,7 @@ body, p, a, span, li, h1, h2, h3, h4 {
 
 body {
   min-height: 100vh;
-  background-image: linear-gradient(0deg, $color_background_stop_1 0%, $color_background_stop_2 100%);
+  background-color :$color_ct_blue_deep;
   color: $color_text_primary;
 
   @include rem(font-size, 1.8rem);

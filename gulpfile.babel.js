@@ -10,6 +10,7 @@ import unretina from 'gulp-unretina';
 import newer from 'gulp-newer';
 import sass from 'gulp-sass';
 import imagemin from 'gulp-imagemin';
+import htmlmin from 'gulp-htmlmin';
 
 import babelify from 'babelify';
 import watchify from 'watchify';
