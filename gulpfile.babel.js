@@ -5,7 +5,6 @@ import fs from 'fs';
 import gulp from 'gulp';
 import gif from 'gulp-if';
 import rename from 'gulp-rename';
-import htmlmin from 'gulp-minify-html';
 import tap from 'gulp-tap';
 import unretina from 'gulp-unretina';
 import newer from 'gulp-newer';
