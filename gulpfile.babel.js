@@ -97,7 +97,7 @@ const browserSync = bs.create();
 
 function retina_path(path) {
   const components = path.split('.');
-  return `${components[0]}_2x${components[1]}`
+  return `${components[0]}_2x.${components[1]}`
 }
 
 function unretina_path(path) {

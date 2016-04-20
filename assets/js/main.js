@@ -1,5 +1,6 @@
 var $ = require('jquery');
 var Ladda = require('ladda');
+var { Retina } = require('retina.js');
 
 $(document).ready(function () {
   Ladda.bind('button[type=submit]')
@@ -39,4 +40,6 @@ $(document).ready(function () {
     });
 
   });
+
+  Retina.init(window);
 });

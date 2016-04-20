@@ -26,7 +26,8 @@
   "dependencies": {
     "jquery": "^2.2.2",
     "ladda": "^1.0.0",
-    "normalize.css": "^4.0.0"
+    "normalize.css": "^4.0.0",
+    "retina.js": "^1.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.7.4",
