@@ -20,7 +20,7 @@ $(document).ready(function () {
       email: $email.val(),
       list: 'conductthis'
     };
-    const url = 'http://services.northplay.co/subscribe';
+    const url = 'https://services.northplay.co/subscribe';
 
     $.ajax({
       url: url,
