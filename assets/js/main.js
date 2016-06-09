@@ -20,14 +20,14 @@ $(document).ready(function () {
       email: $email.val(),
       list: 'conductthis'
     };
-    const url = 'http://newsletters.robocatapps.com/signup';
+    const url = 'http://services.northplay.co/subscribe';
 
     $.ajax({
       url: url,
       method: 'POST',
       cache: false,
-      // contentType: 'application/json',
-      data: data,
+      contentType: 'application/json',
+      data: JSON.stringify(data),
       success: (data) => {
         $("#newsletter_form").hide();
         $("#newsletter_thanks").show();
