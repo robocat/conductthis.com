@@ -12,6 +12,24 @@ server {
   access_log /var/log/nginx/{{ .APP }}-access.log;
   error_log /var/log/nginx/{{ .APP }}-error.log;
 
+  return 301 https://$host:443$request_uri;
+}
+
+server {
+  listen [::]443 ssl spdy;
+  listen 443 ssl spdy;
+
+  {{ if .SSL_SERVER_NAME }}server_name {{ .SSL_SERVER_NAME }}; {{ end }}
+
+  access_log /var/log/nginx/{{ .APP }}-access.log;
+  error_log /var/log/nginx/{{ .APP }}-error.log;
+
+  ssl_certificate {{ .APP_SSL_PATH }}/server.crt;
+  ssl_certificate_key {{ .APP_SSL_PATH }}/server.key;
+
+  keepalive_timeout 70;
+  add_header Alternate-Protocol 443:npn-spdy/2;
+
   location / {
     gzip on;
     gzip_vary on;
