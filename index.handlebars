@@ -1,46 +1,90 @@
 {{> header }}
 
-<div class="header">
-	{{{img "logo.png" "header__logo"}}}
+<div class="header-container">
+  <div class="header">
+  	{{{img "logo.png" "header__logo"}}}
+  </div>
 </div>
 
-<div class="info">
-	<div class="info__description">
-		We're making a game! It's about trains and called Conduct THIS! The rest we're<br>
-		still figuring out. Watch us make it and <a href="mailto:hey+conductthis@northplay.co">stay in touch</a>.
-	</div>
-
-	<a href="https://www.facebook.com/conductthis" class="info__hand" target="_blank">
-		Like us on facebook for <em>maximum insider status</em>
-	</a>
-
-	<div class="info__video">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/keUQqc9_8OU" frameborder="0" allowfullscreen></iframe>
-	</div>
-	<div class="info__video">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/LTW4gOFKwWY" frameborder="0" allowfullscreen></iframe>
-	</div>
-	<div class="info__video">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/DYTntG4mlmQ" frameborder="0" allowfullscreen></iframe>
-	</div>
-  <div class="info__video">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/D13SbqOc92A" frameborder="0" allowfullscreen></iframe>
-	</div>
-
+<div class="tagline">
+  <div class="tagline__title">A game of explosive railway action</div>
+  <div class="tagline__subtitle">Coming soon to iOS &amp; Android</div>
 </div>
 
-<div class="newsletter">
-	<div class="newsletter__description">Choo choo choose us. Lets keep you updated.</div>
-
-	<div class="newsletter__thanks" id="newsletter_thanks">Thank you for signing up. We'll keep you posted!</div>
-	<form class="newsletter__form" id="newsletter_form">
-		<input class="newsletter__email" type="email" name="email" value="" placeholder="you@your-email.com">
-		<button class="newsletter__submit ladda-button" id="newsletter_submit" type="submit" data-style="zoom-in"><span class="ladda-label">Yes!</span></button>
-	</form>
+<div class="gallery">
+  <a href="/images/evergreen.png" data-lightbox="screenshots" class="gallery__item" style="background-image:url(/images/evergreen.png);"></a>
+  <a href="/images/winter.jpg" data-lightbox="screenshots" class="gallery__item" style="background-image:url(/images/winter.jpg);"></a>
+  <a href="/images/tropical.jpg" data-lightbox="screenshots" class="gallery__item" style="background-image:url(/images/tropical.jpg);"></a>
 </div>
 
-<div class="sneakpeek">
-	{{{img "sneakpeek.jpg" "sneakpeek__image"}}}
+<div class="newsletter-container">
+  <div class="newsletter">
+    <div class="newsletter__box">
+      <div class="newsletter__row">
+        <div class="newsletter__description">Sign up to join the explosive launch</div>
+      </div>
+
+      <div class="newsletter__row">
+        <div class="newsletter__thanks" id="newsletter_thanks">Thank you for signing up. We'll keep you posted!</div>
+      	<form class="newsletter__form" id="newsletter_form">
+      		<input class="newsletter__email" type="email" name="email" value="" placeholder="you@your-email.com">
+      		<button class="newsletter__submit ladda-button" id="newsletter_submit" type="submit" data-style="zoom-in"><span class="ladda-label">Let me know</span></button>
+      	</form>
+      </div>
+
+      <div class="newsletter__row">
+        <a href="https://www.facebook.com/conductthis" class="newsletter__like" target="_blank">
+      		Like us on facebook <em>(we share rad stuff from the game)</em>
+      	</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="diaries">
+  <div class="diaries__title">Developer Diaries</div>
+  <div class="diaries__content">
+    <div class="diaries__item">
+  		<iframe width="530" height="296" src="https://www.youtube.com/embed/keUQqc9_8OU" frameborder="0" allowfullscreen></iframe>
+  	</div>
+  	<div class="diaries__item">
+  		<iframe width="530" height="296" src="https://www.youtube.com/embed/LTW4gOFKwWY" frameborder="0" allowfullscreen></iframe>
+  	</div>
+  	<div class="diaries__item">
+  		<iframe width="530" height="296" src="https://www.youtube.com/embed/DYTntG4mlmQ" frameborder="0" allowfullscreen></iframe>
+  	</div>
+    <div class="diaries__item">
+  		<iframe width="530" height="296" src="https://www.youtube.com/embed/D13SbqOc92A" frameborder="0" allowfullscreen></iframe>
+  	</div>
+  </div>
+</div>
+
+<div class="madeby">
+  <div class="madeby__item madeby__logo">
+    <a href="https://northplay.co">
+      <img src="/images/northplay.png" alt="" />
+    </a>
+  </div>
+</div>
+
+<div class="footnotes">
+  <div class="footnotes__item">
+    <p>Wanna talk? <a href="mailto:hello@northplay.co" target="_blank">
+      Send us an email
+    </a></p>
+  </div>
+
+  <div class="footnotes__item">
+    <p>Want to be a beta tester? <a href="https://docs.google.com/forms/d/e/1FAIpQLScJDD_tSDf33-gHK7pSm0lYPWtEgNpxdyCtkjOtOKzlGPVgsw/viewform" target="_blank">
+      Sign up here
+    </a></p>
+  </div>
+
+  <div class="footnotes__item">
+    <p>Join us on <a href="http://facebook.com/northplay" target="_blank">
+      facebook
+    </a></p>
+  </div>
 </div>
 
 {{> footer }}

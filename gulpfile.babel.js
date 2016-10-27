@@ -142,7 +142,8 @@ gulp.task('sass', () => {
     imagePath: '/images',
     includePaths: [
       './node_modules/normalize.css',
-      './node_modules/ladda/css'
+      './node_modules/ladda/css',
+      './node_modules/lightbox2/src/css'
     ]
   };
 

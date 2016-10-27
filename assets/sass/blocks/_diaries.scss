@@ -1,0 +1,48 @@
+@include b(diaries) {
+  @include flex_container;
+
+  margin-top: 80px;
+
+  @include e(title) {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18pt;
+    margin-bottom: 20px;
+  }
+
+  @include e(content) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  @include e(item) {
+    background-color: rgba(255, 255, 255, 0.2);
+    flex: 0 1 530px;
+    height: 296px;
+    margin-bottom: 20px;
+  }
+}
+
+@include breakpoint($layout_max_width) {
+  @include b(diaries) {
+    text-align: center;
+
+    @include e(content) {
+      justify-content: center;
+    }
+  }
+}
+
+@include breakpoint(550px) {
+  @include b(diaries) {
+    @include e(item) {
+      flex-basis: 300px;
+      height: 169px;
+
+      iframe {
+        width: 300px !important;
+        height: 169px !important;
+      }
+    }
+  }
+}

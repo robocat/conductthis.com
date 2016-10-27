@@ -1,6 +1,7 @@
 var $ = require('jquery');
 var Ladda = require('ladda');
 var { Retina } = require('retina.js');
+var { Lightbox } = require('lightbox2');
 
 const handle_newsletter_submit = function(e) {
   e.preventDefault();
@@ -42,4 +43,5 @@ $(document).ready(function () {
   $('#newsletter_form').on('submit', handle_newsletter_submit);
 
   Retina.init(window);
+  Lightbox.init();
 });

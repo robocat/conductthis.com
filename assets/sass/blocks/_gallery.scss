@@ -1,0 +1,56 @@
+@include b(gallery) {
+  @include flex_container;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+
+  @include e(item) {
+    display: block;
+    margin-right: 20px;
+    flex: 0 1 345px;
+    background-size: cover;
+    border-radius: 15px;
+    cursor: zoom-in;
+
+    height: 275px;
+    width: 345px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.gallery__item img {
+  max-width: 100% !important;
+  height: auto;
+}
+
+@include breakpoint($layout_max_width) {
+  @include b(gallery) {
+    flex-wrap: wrap;
+    padding: 0 10px;
+
+    @include e(item) {
+      flex: 0 1 800px;
+      height: 400px;
+      margin: 20px 0;
+    }
+  }
+}
+
+@include breakpoint(550px) {
+  @include b(diaries) {
+    @include e(item) {
+      flex-basis: 300px;
+      height: 169px;
+
+      iframe {
+        width: 300px !important;
+        height: 169px !important;
+      }
+    }
+  }
+}

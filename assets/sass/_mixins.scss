@@ -102,3 +102,13 @@ $modifierSeparator: '--';
         }
     }
 }
+
+@mixin breakpoint($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+
+  @media screen and (max-device-width: $width) {
+    @content;
+  }
+}

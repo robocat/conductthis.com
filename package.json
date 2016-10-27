@@ -29,6 +29,7 @@
     "express": "^4.13.4",
     "jquery": "^2.2.2",
     "ladda": "^1.0.0",
+    "lightbox2": "^2.8.2",
     "retina.js": "^1.1.0"
   },
   "devDependencies": {

@@ -1,0 +1,16 @@
+@include b(madeby) {
+  @include flex_container;
+  display: flex;
+  margin-top: 160px;
+  justify-content: center;
+  align-items: center;
+
+  @include e(item) {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  a:hover img {
+    opacity: 0.8;
+  }
+}

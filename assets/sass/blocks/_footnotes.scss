@@ -1,0 +1,40 @@
+@include b(footnotes) {
+  @include flex_container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 0;
+  margin-top: 40px;
+
+  @include e(item) {
+    flex: 1 1 33%;
+    display: flex;
+    justify-content: center;
+    color: #00a2ff;
+    font-size: 12pt;
+
+    &:first-child {justify-content: flex-start; }
+    &:last-child { justify-content: flex-end; }
+
+    a {
+      color: #00a2ff;
+      text-decoration: underline;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@include breakpoint(650px) {
+  @include b(footnotes) {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include e(item) {
+      flex: 1 1 100%;
+      justify-content: center !important;
+    }
+  }
+}

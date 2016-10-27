@@ -1,32 +1,49 @@
+@include b(newsletter-container) {
+  background: url('/images/explosion.png') no-repeat center center;
+  width: 100%;
+  min-height: 739px;
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+}
+
 @include b(newsletter) {
   @include flex_container;
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
-  text-align: center;
+
+  @include e(box) {
+    margin: 0 auto;
+    max-width: 720px;
+    padding: 30px;
+    border-radius: 10px;
+
+    background-color: #fff;
+  }
 
   @include e(description) {
-    margin-top: 50px;
-    text-align: center;
+    color: #000;
+    font-size: 20pt;
   }
 
   @include e(form) {
     display: flex;
-    margin-top: 30px;
+    margin-top: 20px;
     flex-flow: row nowrap;
-    justify-content: center;
   }
 
   @include e(submit) {
-    margin-left: 5px;
+    margin-left: 15px;
 
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: $color_action_background;
     color: $color_action_foreground;
     font-weight: bold;
 
-    padding: 10px 20px;
+    padding: 20px 20px;
+    font-size: 16pt;
 
     &:hover {
       background-color: darken($color_action_background, 10%);
@@ -34,10 +51,13 @@
   }
 
   @include e(email) {
+    flex: 1 1 auto;
     border: none;
     border-radius: 5px;
+    background-color: #d9d9d9;
+    font-size: 18pt;
 
-    padding: 10px;
+    padding: 10px 10px 10px 20px;
     min-width: 240px;
 
     &:disabled {
@@ -45,8 +65,72 @@
     }
   }
 
+  @include e(like) {
+    display: block;
+    margin-top: 15px;
+
+    border: none;
+    border-radius: 5px;
+    background-color: $color_ct_blue_light;
+    color: $color_ct_blue_deep;
+    font-weight: bold;
+    font-size: 16pt;
+    line-height: 22pt;
+    text-decoration: none;
+    padding: 20px 30px 20px 80px;
+    flex: 1 1 auto;
+    background-image: url('/images/fb-hand_2x.png');
+    background-position: 20px 50%;
+    background-size: 43px 37px;
+    background-repeat: no-repeat;
+
+    em {
+      font-size: 14pt;
+      font-style: normal;
+      color: #4467be;
+    }
+
+    &:hover {
+      color: $color_ct_blue_deep;
+      background-color: lighten($color_ct_blue_light, 10%);
+    }
+  }
+
   @include e(thanks) {
     display: none;
-    margin-top: 30px;
+    margin-top: 15px;
+    font-size: 20pt;
+    line-height: 20pt;
+    color: $color_ct_orange;
+  }
+}
+
+@include breakpoint(600px) {
+  @include b(newsletter) {
+    margin: 0 10px;
+    
+    @include e(description) {
+      text-align: center;
+      line-height: 24pt;
+    }
+
+    @include e(email) {
+      padding: 20px;
+      text-align: center;
+    }
+
+    @include e(form) {
+      flex-flow: row wrap;
+    }
+
+    @include e(row) {
+      flex: 1 1 100%;
+      flex-wrap: wrap;
+    }
+
+    @include e(submit) {
+      flex: 1 1 auto;
+      margin: 10px 0 0 0;
+    }
   }
 }
