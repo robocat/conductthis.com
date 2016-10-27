@@ -41,6 +41,7 @@
     background-color: $color_action_background;
     color: $color_action_foreground;
     font-weight: bold;
+    cursor: pointer;
 
     padding: 20px 20px;
     font-size: 16pt;
@@ -108,7 +109,7 @@
 @include breakpoint(600px) {
   @include b(newsletter) {
     margin: 0 10px;
-    
+
     @include e(description) {
       text-align: center;
       line-height: 24pt;

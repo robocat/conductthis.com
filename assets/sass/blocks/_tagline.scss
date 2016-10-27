@@ -11,13 +11,13 @@
 
   @include e(title) {
     font-size: 42pt;
-    line-height: 42pt;
+    line-height: 52pt;
     text-align: center;
   }
 
   @include e(subtitle) {
-    font-size: 34pt;
-    line-height: 34pt;
+    font-size: 28pt;
+    line-height: 28pt;
     color: #56a8b7;
     text-align: center;
   }
