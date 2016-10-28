@@ -107,6 +107,11 @@
 }
 
 @include breakpoint(600px) {
+  @include b(newsletter-container) {
+    min-height: 600px;
+    background-size: cover;
+  }
+
   @include b(newsletter) {
     margin: 0 10px;
 

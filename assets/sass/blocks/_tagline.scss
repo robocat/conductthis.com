@@ -36,3 +36,19 @@
     }
   }
 }
+
+@include breakpoint(520px) {
+  @include b(tagline) {
+    margin-top: 0;
+
+    @include e(title) {
+      font-size: 28pt;
+      line-height: 32pt;
+    }
+
+    @include e(subtitle) {
+      font-size: 18pt;
+      line-height: 22pt;
+    }
+  }
+}

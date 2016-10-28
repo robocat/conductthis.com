@@ -46,15 +46,11 @@
 }
 
 @include breakpoint(550px) {
-  @include b(diaries) {
-    @include e(item) {
-      flex-basis: 300px;
-      height: 169px;
+  @include b(gallery) {
+    margin-top: 50px;
 
-      iframe {
-        width: 300px !important;
-        height: 169px !important;
-      }
+    @include e(item) {
+      margin: 20px 0 0 0;
     }
   }
 }
