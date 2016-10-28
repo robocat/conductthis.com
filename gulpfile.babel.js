@@ -27,12 +27,12 @@ import autoprefixer from 'gulp-autoprefixer';
 import bs from 'browser-sync';
 
 const site = {
-  title: 'Conduct this',
-  description: 'A game about trains',
+  title: 'Conduct THIS!',
+  description: 'A game of explosive railway action',
   keywords: 'train,game,conduct,robocat',
-  url: 'http://conductthis.com',
+  url: 'https://conductthis.com',
   fb: {
-    appName: '',
+    appName: 'Conduct THIS!',
     appId: ''
   }
 };
