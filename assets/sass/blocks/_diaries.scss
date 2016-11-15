@@ -5,8 +5,8 @@
 
   @include e(title) {
     color: rgba(255, 255, 255, 0.5);
-    font-size: 18pt;
-    margin-bottom: 20px;
+    font-size: 22pt;
+    margin-bottom: 30px;
   }
 
   @include e(content) {

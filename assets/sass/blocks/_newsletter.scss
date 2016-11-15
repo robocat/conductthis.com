@@ -61,6 +61,10 @@
     padding: 10px 10px 10px 20px;
     min-width: 240px;
 
+    &::placeholder {
+      color: rgba(66, 66, 66, 0.4);
+    }
+
     &:disabled {
       opacity: 0.6;
     }
