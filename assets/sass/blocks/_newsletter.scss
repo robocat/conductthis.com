@@ -146,6 +146,19 @@
   }
 }
 
+@include breakpoint(760px) {
+  @include b(newsletter) {
+    @include e(social) {
+      flex-wrap: wrap;
+    }
+
+    .newsletter-button {
+      margin: 5px 0;
+      flex: 1 1 100%;
+    }
+  }
+}
+
 @include breakpoint(600px) {
   @include b(newsletter-container) {
     min-height: 600px;

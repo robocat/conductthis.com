@@ -8,17 +8,12 @@
 
   @include e(item) {
     display: block;
-    // margin-right: 10px;
     flex: 0 1 210px;
     background-size: cover;
     cursor: zoom-in;
 
     height: 168px;
     width: 210px;
-
-    // &:last-child {
-    //   margin-right: 0;
-    // }
 
     &:hover {
       opacity: 0.8;
@@ -35,11 +30,13 @@
   @include b(gallery) {
     flex-wrap: wrap;
     padding: 0 10px;
+    justify-content: center;
+    max-width: 800px;
 
     @include e(item) {
-      flex: 0 1 800px;
-      height: 400px;
-      margin: 20px 0;
+      // flex: 0 1 800px;
+      // height: 400px;
+      margin: 20px 20px;
     }
   }
 }
