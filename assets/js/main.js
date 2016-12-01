@@ -26,12 +26,12 @@ const handle_newsletter_submit = function(e) {
     cache: false,
     contentType: 'application/json',
     data: JSON.stringify(data),
-    success: (data) => {
+    success: function (data) {
       $("#newsletter_form").hide();
       $("#newsletter_thanks").show();
       Ladda.stopAll();
     },
-    error: (xhr, status, error) => {
+    error: function (xhr, status, error) {
       $email.prop('disabled', false);
       Ladda.stopAll();
     }
