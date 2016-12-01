@@ -1,3 +1,21 @@
+.newsletter-button {
+  display: block;
+
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18pt;
+  line-height: 22pt;
+  text-decoration: none;
+  padding: 18px 30px 18px 80px;
+  flex: 1 1 33%;
+  margin: 0 10px;
+  background-repeat: no-repeat;
+
+  &:first-child { margin-left: 0; }
+  &:last-child { margin-right: 0; }
+}
+
 @include b(newsletter-container) {
   background: url('/images/explosion.png') no-repeat center center;
   width: 100%;
@@ -11,11 +29,12 @@
   @include flex_container;
   align-items: center;
   justify-content: center;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
+  display: flex;
+  width: 100%;
 
   @include e(box) {
-    margin: 0 auto;
-    max-width: 720px;
+    flex: 0 1 720px;
     padding: 30px;
     border-radius: 10px;
 
@@ -43,7 +62,7 @@
     font-weight: bold;
     cursor: pointer;
 
-    padding: 20px 20px;
+    padding: 20px 40px;
     font-size: 16pt;
 
     &:hover {
@@ -71,34 +90,51 @@
   }
 
   @include e(like) {
-    display: block;
-    margin-top: 15px;
-
-    border: none;
-    border-radius: 5px;
+    @extend .newsletter-button;
     background-color: $color_ct_blue_light;
-    color: $color_ct_blue_deep;
-    font-weight: bold;
-    font-size: 16pt;
-    line-height: 22pt;
-    text-decoration: none;
-    padding: 20px 30px 20px 80px;
-    flex: 1 1 auto;
-    background-image: url('/images/fb-hand_2x.png');
+    color: #263770;
+    background-image: url('/images/like-thumb_2x.png');
     background-position: 20px 50%;
     background-size: 43px 37px;
-    background-repeat: no-repeat;
-
-    em {
-      font-size: 14pt;
-      font-style: normal;
-      color: #4467be;
-    }
 
     &:hover {
       color: $color_ct_blue_deep;
       background-color: lighten($color_ct_blue_light, 10%);
     }
+  }
+
+  @include e(tweet) {
+    @extend .newsletter-button;
+    background-color: #6abdd5;
+    color: #266273;
+    background-image: url('/images/tweet-bird_2x.png');
+    background-position: 20px 50%;
+    background-size: 40px 34px;
+
+    &:hover {
+      color: #266273;
+      background-color: lighten(#6abdd5, 10%);
+    }
+  }
+
+  @include e(write) {
+    @extend .newsletter-button;
+    background-color: #f49915;
+    color: #8b5409;
+    background-image: url('/images/mail-envelope_2x.png');
+    background-position: 20px 50%;
+    background-size: 40px 26px;
+
+    &:hover {
+      color: #8b5409;
+      background-color: lighten(#f49915, 10%);
+    }
+  }
+
+  @include e(social) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
   }
 
   @include e(thanks) {

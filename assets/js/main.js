@@ -43,5 +43,4 @@ $(document).ready(function () {
   $('#newsletter_form').on('submit', handle_newsletter_submit);
 
   Retina.init(window);
-  Lightbox.init();
 });
