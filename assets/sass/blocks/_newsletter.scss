@@ -18,7 +18,7 @@
 
 @include b(newsletter-container) {
   background: url('/images/explosion.png') no-repeat center center;
-  width: 100%;
+  // width: 100%;
   min-height: 739px;
   margin-top: 120px;
   display: flex;
@@ -78,7 +78,7 @@
     font-size: 18pt;
 
     padding: 10px 10px 10px 20px;
-    min-width: 240px;
+    min-width: 80px;
 
     &::placeholder {
       color: rgba(66, 66, 66, 0.4);
@@ -166,7 +166,11 @@
   }
 
   @include b(newsletter) {
-    margin: 0 10px;
+    margin: 0;
+
+    @include e(box) {
+      margin: 0;
+    }
 
     @include e(description) {
       text-align: center;
@@ -183,7 +187,7 @@
     }
 
     @include e(row) {
-      flex: 1 1 100%;
+      flex: 1 1 auto;
       flex-wrap: wrap;
     }
 
