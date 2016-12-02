@@ -5,15 +5,12 @@ import fs from 'fs';
 import gulp from 'gulp';
 import gif from 'gulp-if';
 import rename from 'gulp-rename';
-import tap from 'gulp-tap';
 import unretina from 'gulp-unretina';
 import newer from 'gulp-newer';
 import sass from 'gulp-sass';
 import imagemin from 'gulp-imagemin';
 import htmlmin from 'gulp-htmlmin';
-import uglify from 'gulp-uglify';
 
-import babelify from 'babelify';
 import watchify from 'watchify';
 import browserify from 'browserify';
 import source from 'vinyl-source-stream';
@@ -44,7 +41,8 @@ const config = {
     partials: './assets/templates/**/*.handlebars',
     images: './assets/images/**/*.{png,jpg,gif,svg}',
     sass: './assets/sass/**/*.{scss,sass}',
-    js: './assets/js/main.js'
+    js: './assets/js/main.js',
+    downloads: './assets/downloads/**/*'
   },
   production: false,
   watching: false,
@@ -101,7 +99,7 @@ const browserSync = bs.create();
 
 function retina_path(path) {
   const components = path.split('.');
-  return `${components[0]}_2x.${components[1]}`
+  return `${components[0]}_2x.${components[1]}`;
 }
 
 function unretina_path(path) {
@@ -110,7 +108,7 @@ function unretina_path(path) {
 }
 
 function file_exists(path) {
-  return !path.match(`\n`) && fs.existsSync(path);
+  return !path.match('\n') && fs.existsSync(path);
 }
 
 function load_partial(name) {
@@ -126,13 +124,13 @@ function load_partial(name) {
 function image_helper(path, cls = null, has_retina = true) {
   const retina = retina_path(path);
   var str = `<img src="/images/${path}"`;
-  if (retina) {
+  if (has_retina && retina) {
     str += ` data-at2x="/images/${retina}"`;
   }
   if (typeof cls === 'string') {
     str += ` class="${cls}"`;
   }
-  str += ">";
+  str += '>';
 
   return str;
 }
@@ -191,8 +189,8 @@ gulp.task('html', () => {
   let options = {
     ignorePartials: true,
     partials: {
-      get header() { return load_partial('header') },
-      get footer() { return load_partial('footer') }
+      get header() { return load_partial('header'); },
+      get footer() { return load_partial('footer'); }
     },
     helpers: {
       img: (path, cls = null, has_retina = true) => image_helper(path, cls, has_retina)
@@ -217,6 +215,11 @@ gulp.task('html', () => {
     .pipe(gif(config.watching, browserSync.stream()));
 });
 
+gulp.task('copyfiles', () => {
+  return gulp.src(config.paths.downloads)
+    .pipe(gulp.dest(`${config.build}/downloads/`));
+});
+
 gulp.task('sync', () => {
   browserSync.init({
     server: {
@@ -234,7 +237,7 @@ gulp.task('bundle', () => {
   return configure_bundler();
 });
 
-gulp.task('build', ['html', 'images', 'sass', 'bundle']);
+gulp.task('build', ['html', 'images', 'sass', 'copyfiles', 'bundle']);
 gulp.task('production', ['set-production', 'build'])
 
 gulp.task('watch', ['sync'], () => {
@@ -245,6 +248,7 @@ gulp.task('watch', ['sync'], () => {
   gulp.watch(config.paths.partials, ['html']);
   gulp.watch(config.paths.images, ['images']);
   gulp.watch(config.paths.sass, ['sass']);
+  gulp.watch(config.paths.downloads, ['copyfiles']);
 });
 
 gulp.task('default', ['build', 'watch']);
