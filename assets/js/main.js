@@ -5,11 +5,11 @@ var { Lightbox } = require('lightbox2');
 
 const handle_newsletter_submit = function(e) {
   e.preventDefault();
-  $email = $(this).find('input[name=email]');
+  var $email = $(this).find('input[name=email]');
 
-  if ($email.val() == "") {
+  if ($email.val() == '') {
     Ladda.stopAll();
-    return
+    return;
   }
 
   $email.prop('disabled', true);
@@ -27,8 +27,8 @@ const handle_newsletter_submit = function(e) {
     contentType: 'application/json',
     data: JSON.stringify(data),
     success: function (data) {
-      $("#newsletter_form").hide();
-      $("#newsletter_thanks").show();
+      $('#newsletter_form').hide();
+      $('#newsletter_thanks').show();
       Ladda.stopAll();
     },
     error: function (xhr, status, error) {
@@ -36,10 +36,10 @@ const handle_newsletter_submit = function(e) {
       Ladda.stopAll();
     }
   });
-}
+};
 
 $(document).ready(function () {
-  Ladda.bind('button[type=submit]')
+  Ladda.bind('button[type=submit]');
   $('#newsletter_form').on('submit', handle_newsletter_submit);
 
   Retina.init(window);
