@@ -25,8 +25,8 @@ import bs from 'browser-sync';
 
 const site = {
   title: 'Conduct THIS!',
-  description: 'A game of explosive railway action',
-  keywords: 'train,game,conduct,robocat',
+  description: 'A game of explosive railway action for iOS & Android',
+  keywords: 'train,rail,action,puzzle,explosion,game,conductor,tgv, hinkansen,railway,intercity,winter,tropical',
   url: 'https://conductthis.com',
   fb: {
     appName: 'Conduct THIS!',
