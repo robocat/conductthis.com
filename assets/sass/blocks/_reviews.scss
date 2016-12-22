@@ -12,12 +12,15 @@
     height: 50px;
     background: url('/images/review-hat_2x.png') no-repeat center center;
     background-size: 65px 50px;
+    margin-right: 5px;
   }
 
   @include e(quote) {
     flex: 1 1 auto;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
   }
 
   @include e(item) {
@@ -43,8 +46,7 @@
     }
 
     @include e(hat) {
-      flex-basis: 100%;
-      margin-bottom: 20px;
+      display: none;
     }
   }
 }
