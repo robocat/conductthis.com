@@ -14,6 +14,7 @@ const Item = styled(Link)`
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(${props => props.isActive ? props.activeImage : props.inactiveImage});
+  cursor: pointer;
   display: flex;
   justify-content: center;
   height: 72px;
