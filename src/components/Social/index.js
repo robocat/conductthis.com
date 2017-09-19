@@ -43,6 +43,7 @@ const StyledLink = styled(Link)`
   font-weight: 500;
   line-height: 36px;
   text-decoration: none;
+  padding: 0 10px;
   
   @media (max-width: 720px) {
     margin: 0 0 10px 0;
