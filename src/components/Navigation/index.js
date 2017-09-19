@@ -16,6 +16,7 @@ const Item = styled(Link)`
   background-image: url(${props => props.isActive ? props.activeImage : props.inactiveImage});
   cursor: pointer;
   display: flex;
+  flex: 1 1 166px;
   justify-content: center;
   height: 72px;
   margin-right: 20px;
@@ -23,6 +24,13 @@ const Item = styled(Link)`
   
   &:last-child {
     margin-right: 0;
+  }
+  
+  @media (max-width: 420px) {
+    background-size: 166px 72px;
+    background-position: center center;
+    flex: 1 1 100%;
+    margin: 0 0 30px 0;
   }
 `;
 
@@ -34,6 +42,11 @@ const Wrapper = styled.div`
 
   @media (max-width: 1100px) {
     margin: 0 10px;
+  }
+  
+  @media (max-width: 420px) {
+    flex-wrap: wrap;
+    
   }
 `;
 

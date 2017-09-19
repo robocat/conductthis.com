@@ -8,6 +8,10 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   margin: 80px 0 0 0;
+  
+  @media (max-width: 620px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const Text = styled.a`
@@ -17,11 +21,24 @@ const Text = styled.a`
   display: flex;
   font-family: "cubano";
   font-size: 30px;
+  line-height: 1.1em;
   text-decoration: none;
+  
+  @media (max-width: 620px) {
+    flex: 1 1 100%;
+    text-align: center;
+    justify-content: center;
+    margin: 10px 0;
+    order: 2;
+  }
 `;
 
 const LeftText = Text.extend`
   justify-content: flex-end;
+  
+  @media (max-width: 620px) {
+    order: 1;
+  }
 `;
 
 const People = styled.span`
@@ -34,6 +51,10 @@ const Location = styled.span`
 const Logo = styled.img`
   height: 153px;
   width: 158px;
+  
+  @media (max-width: 620px) {
+    order: 0;
+  }
 `;
 
 const Northplay = styled.a`

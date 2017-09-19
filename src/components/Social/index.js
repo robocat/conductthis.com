@@ -20,6 +20,15 @@ const Row = styled.div`
   justify-content: space-around;
   margin-bottom: 30px;
   width: 100%;
+  
+  @media (max-width: 720px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  @media (max-width: 420px) {
+    margin: 0;
+  }
 `;
 
 const Icon = styled.img`
@@ -34,6 +43,14 @@ const StyledLink = styled(Link)`
   font-weight: 500;
   line-height: 36px;
   text-decoration: none;
+  
+  @media (max-width: 720px) {
+    margin: 0 0 10px 0;
+  }
+  
+  @media (max-width: 420px) {
+    font-size: 24px;
+  }
   
   &:hover {
     text-decoration: underline;

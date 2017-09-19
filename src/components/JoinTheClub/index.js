@@ -13,12 +13,27 @@ const Container = styled.div`
   box-shadow: 0px 0px 20px 5px #2b30be;
   display: flex;
   padding: 35px;
+  
+  @media (max-width: 880px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const WhatIs = styled.div`
   align-items: center;
   flex: 1 1 60%;
   display: flex;
+  
+  @media (max-width: 880px) {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 520px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
 `;
 
 const Stamp = styled.img`
@@ -51,6 +66,14 @@ const SignUpForm = styled.div`
   flex: 1 1 40%;
   display: flex;
   justify-content: center;
+  
+  @media (max-width: 880px) {
+    flex: 1 1 100%;
+  }
+  
+  @media (max-width: 420px) {
+    
+  }
 `;
 
 const Email = styled.input`
@@ -65,6 +88,10 @@ const Email = styled.input`
   line-height: 18px;
   outline: none;
   padding: 15px;
+  
+  @media (max-width: 420px) {
+    padding: 15px 0;
+  }
 `;
 
 const Submit = styled.button`
@@ -78,6 +105,10 @@ const Submit = styled.button`
   font-size: 18px;
   font-weight: 500;
   padding: 15.5px 15px;
+  
+  @media (max-width: 420px) {
+    width: 100px;
+  }
 `;
 
 class JoinTheClub extends React.Component {

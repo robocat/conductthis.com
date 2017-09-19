@@ -36,6 +36,7 @@ const Description = styled.div`
   @media (max-width: 800px) {
     flex: 1 1 100%;
     margin: 0 10px;
+    text-align: center;
   }
 `;
 

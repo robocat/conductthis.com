@@ -11,12 +11,22 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   margin: 30px 0;
+  
+  @media (max-width: 720px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const StoreButtonContainer = styled.div`
   flex: 1 1 50%;
   align-items: center;
   display: flex;
+  
+  @media (max-width: 720px) {
+    flex: 1 1 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
 `;
 
 const AppStoreContainer = StoreButtonContainer.extend`
@@ -41,6 +51,10 @@ const AppIcon = styled.img`
   height: 130px;
   width: 130px;
   margin: 0 25px;
+  
+  @media (max-width: 720px) {
+    display: none;
+  }
 `
 
 const Download = ({ playStoreUrl, appStoreUrl, appIcon }) => {
