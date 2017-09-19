@@ -1,0 +1,12 @@
+{
+  "root": "build/",
+  "https_only": true,
+  "headers": {
+    "/**": {
+      "Strict-Transport-Security": "max-age=2592000; includeSubDomains ",
+      "X-Frame-Options": "SAMEORIGIN",
+      "X-Xss-Protection": "1; mode=block",
+      "X-Content-Type-Options": "nosniff"
+    }
+  }
+}
