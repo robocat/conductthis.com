@@ -77,6 +77,7 @@ const SignUpForm = styled.div`
 `;
 
 const Email = styled.input`
+  appearance: none;
   background-color: #fff;
   border: 2px solid #ffea37;
   box-shadow: 0px 0px 20px 5px rgba(255, 234, 55, 0.4);
