@@ -47,7 +47,7 @@ const ConductAR = () => {
       ]} />
       <Reviews reviews={[
       ]} />
-      <Social presskit="/conduct-ar-presskit.zip" />
+      <Social presskit="https://www.dropbox.com/sh/xmh3x1dkr2smwj4/AAAEZfce78EVdxDx0j9ISm16a?dl=1" />
   </div>;
 };
 
