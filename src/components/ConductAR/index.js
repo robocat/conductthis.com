@@ -46,6 +46,7 @@ const ConductAR = () => {
         { preview: preview5, full: full5 },
       ]} />
       <Reviews reviews={[
+        { text: "Once you become addicted to Conduct AR, you’ll be happy to see that there’s plenty of content to work through before you finish the game. For $3.99, it’s worth the experience alone", source: { name: "MacStories", url: "https://www.macstories.net/reviews/conduct-ar-desktop-micromanaging-at-its-finest/" } },
       ]} />
       <Social presskit="https://www.dropbox.com/sh/xmh3x1dkr2smwj4/AAAEZfce78EVdxDx0j9ISm16a?dl=1" />
   </div>;
