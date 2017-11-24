@@ -54,21 +54,27 @@ const Container = styled.div`
   background-color: #111010;;
 `
 
+const NavigationItem = ({location, path, activeImage, inactiveImage}) => {
+  return <Item 
+    to={path}
+    activeImage={activeImage}
+    inactiveImage={inactiveImage}
+    isActive={location.pathname === path} />;
+};
+
 const Navigation = ({ match, location }) => {
-  const isAR = match.isExact || location.pathname === '/conduct-ar';
-  
   return <Container>
     <Wrapper>
-      <Item 
-        to="/conduct-this" 
-        activeImage={ctActive}
-        inactiveImage={ctInactive}
-        isActive={!isAR} />
-      <Item 
-        to="/" 
-        activeImage={caActive}
-        inactiveImage={caInactive}
-        isActive={isAR} />
+      <NavigationItem
+          path="/this"
+          activeImage={ctActive}
+          inactiveImage={ctInactive}
+          location={location} />
+      <NavigationItem
+          path="/ar"
+          activeImage={caActive}
+          inactiveImage={caInactive}
+          location={location} />
     </Wrapper>
   </Container>;
 };
