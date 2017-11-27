@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
-// import Container from './container';
 import Navigation from 'components/Navigation';
 
 import ConductAR from 'pages/ConductAR';
@@ -11,7 +10,6 @@ const Router = () => {
   return <BrowserRouter>
     <div>
       <Route component={Navigation} />
-      {/* <Container> */}
         <Switch>
           <Route exact path="/" render={() =>
             <Redirect to="/ar" />
@@ -20,7 +18,6 @@ const Router = () => {
           <Route exact path="/this" component={ConductThis} />
           <Route exact path="/deluxe" component={ConductThis} />
         </Switch>
-      {/* </Container> */}
     </div>
   </BrowserRouter>
 };
