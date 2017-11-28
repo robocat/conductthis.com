@@ -26,6 +26,11 @@ const Preview = styled.div`
   flex: 0 0 208px;
   height: 167px;
   width: 208px;
+  transition: all 0.15s ease;
+  
+  &:hover {
+    opacity: 0.8;
+  }
   
   @media (max-width: 1080px) {
     margin: 10px;

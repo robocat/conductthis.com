@@ -7,8 +7,6 @@ import Screenshots from 'components/Screenshots';
 import Reviews from 'components/Reviews';
 import Social from 'components/Social';
 
-import BehindScenes from './behind';
-
 import appIcon from './app-icon.png';
 
 import preview1 from './screen-preview-1.png';
@@ -31,7 +29,7 @@ const ConductAR = () => {
       appStoreUrl="https://itunes.apple.com/us/app/conduct-this/id1151455384?ls=1&mt=8&at=1010lwVg&ct=conductthis-site"
       playStoreUrl="https://play.google.com/store/apps/details?id=co.northplay.ConductTHIS" />
     <Info
-      tagline="A Game of Explosive Railway Action"
+      tagline="A Game of Explosive Railroad Action"
       description={
         <span>
           Set in a stunning world, with incredibly simple controls you race against time to bring passengers safely to their destination by commanding trains, switching tracks and avoiding collisions in increasingly challenging action-puzzles.
@@ -39,7 +37,7 @@ const ConductAR = () => {
           As you progress you unlock new trains, gain access to new beautiful and mysterious regions and earn awards in an addictive journey to the far reaches of this little world.
         </span>
       }
-      descriptionColor="#fdeaa3" />
+      descriptionColor="#edff76" />
     <Screenshots
       images={[
         { preview: preview1, full: full1 },
@@ -54,8 +52,7 @@ const ConductAR = () => {
         { text: "Conduct THIS! is one of the fresh breaths of air and originality that the App Store needs from time to time", source: { name: "Appsfera", url: "https://www.applesfera.com/juegos-ios/conduct-this-un-simulador-de-trenes-simple-pero-que-es-todo-un-desafio-app-de-la-semana" } },
         { text: "Conduct This is a gorgeous-challenging game of skill, what feels like such a Transport Tycoon on Red Bull", source: { name: "Check App", url: "http://www.check-app.de/2016/12/31/app-tipp-nicht-nur-fuer-eisenbahnfans-conduct-this/" } },
       ]} />
-      <BehindScenes />
-      <Social presskit="/conduct-this-presspackage.zip" />
+      <Social presskit="https://www.dropbox.com/s/cek4psxaxhaykp1/conduct-this-presskit.zip?dl=1" />
   </div>;
 };
 

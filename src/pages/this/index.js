@@ -5,14 +5,12 @@ import Content from 'components/ConductTHIS';
 import Container from 'components/Container';
 import MadeBy from 'components/MadeBy';
 import JoinTheClub from 'components/JoinTheClub';
+import Community from 'components/Community';
 
-import background from './background.jpg';
+import gradient from './gradient-this.jpg';
 
 const StyledWrapper = styled.div`
-  background-image: url(${background});
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-color: #213967;
+  background: #101b05;
   width: 100%;
 `;
 
@@ -20,9 +18,10 @@ const ConductTHIS = () => {
   return <StyledWrapper>
     <Container>
       <Content />
+      <Community />
       <JoinTheClub />
-      <MadeBy />
     </Container>
+    <MadeBy gradient={gradient} />
   </StyledWrapper>;
 };
 

@@ -5,25 +5,24 @@ import Content from 'components/ConductAR';
 import Container from 'components/Container';
 import MadeBy from 'components/MadeBy';
 import JoinTheClub from 'components/JoinTheClub';
+import Community from 'components/Community';
 
-import gradient from './background-gradient.png';
+import gradient from './gradient-ar.jpg';
 
 const StyledWrapper = styled.div`
-  background-repeat: repeat-x;
-  background-size: 1px 601px;
-  background-position: bottom center;
-  background-image: url(${gradient});
+  background: #240e00;
   width: 100%;
 `;
 
-const ConductAR = () => {
+const ConductDeluxe = () => {
   return <StyledWrapper>
     <Container>
       <Content />
+      <Community />
       <JoinTheClub />
-      <MadeBy />
     </Container>
+    <MadeBy gradient={gradient} />
   </StyledWrapper>;
 };
 
-export default ConductAR;
+export default ConductDeluxe;

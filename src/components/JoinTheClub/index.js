@@ -13,6 +13,9 @@ const Container = styled.div`
   box-shadow: 0px 0px 20px 5px #2b30be;
   display: flex;
   padding: 35px;
+  z-index: 10;
+  position: relative;
+  margin-top: 80px;
   
   @media (max-width: 880px) {
     flex-wrap: wrap;

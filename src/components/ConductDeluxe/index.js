@@ -23,20 +23,20 @@ import full5 from './screen-full-5.jpg';
 
 const ConductAR = () => {
   return <div>
-    <Video url="https://www.youtube.com/watch?v=qECJSCVyx8I" />
+    <Video url="https://www.youtube.com/watch?v=veSWRCsnQqo" />
     <Download 
       appIcon={appIcon} 
-      appStoreUrl="https://itunes.apple.com/us/app/conduct-ar/id1256506674?ls=1&mt=8&at=1010lwVg&ct=conductthis-site" />
+      steamStoreUrl="https://itunes.apple.com/us/app/conduct-this/id1151455384?ls=1&mt=8&at=1010lwVg&ct=conductthis-site"/>
     <Info
-      tagline="Explosive Augmented Reality Action"
+      tagline="The Definitive Railroad Action"
       description={
         <span>
-          Conduct AR! is an epic augmented reality game of explosive railway action. Set in the old west you journey through diorama worlds that unfold right in front of you.
+          Conduct DELUXE! is an addictive game of explosive railway action that will challenge your inner conductor. Set in a stunning world, with incredibly simple controls you race against time to bring passengers safely to their destination by commanding trains, switching tracks and avoiding collisions in increasingly challenging action-puzzles.
           <br /><br />
-          Commanding trains, switching tracks and avoiding collisions, playing out in reality on the table in front of you. Look over and around landscapes, solve spatial puzzles and keep the situation under control to become the ultimate conductor in the Wild West.
+          This is the definitive edition, reimagined for your computer. With all new visuals, content and a level editor!
         </span>
       }
-      descriptionColor="#fdeaa3" />
+      descriptionColor="#34cdfd" />
     <Screenshots
       images={[
         { preview: preview1, full: full1 },
@@ -46,10 +46,9 @@ const ConductAR = () => {
         { preview: preview5, full: full5 },
       ]} />
       <Reviews reviews={[
-        { text: "Desktop Micromanaging at its Finest", source: { name: "MacStories", url: "https://www.macstories.net/reviews/conduct-ar-desktop-micromanaging-at-its-finest/" } },
-        { text: "A perfect example of how AR games should be made", source: { name: "arcritic", url: "https://arcritic.com/100/conduct-ar-game-review/" } }
+        { text: "Transport Tycoon on Red Bull", source: { name: "Apsfera" } },
       ]} />
-      <Social presskit="https://www.dropbox.com/sh/xmh3x1dkr2smwj4/AAAEZfce78EVdxDx0j9ISm16a?dl=1" />
+      <Social presskit="https://www.dropbox.com/s/8jvd4eljdd2qva1/Conduct%20DELUXE%21%20Press%20Kit.zip?dl=1" />
   </div>;
 };
 

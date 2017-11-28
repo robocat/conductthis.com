@@ -3,8 +3,9 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import Navigation from 'components/Navigation';
 
-import ConductAR from 'pages/ConductAR';
-import ConductThis from 'pages/ConductTHIS';
+import Ar from 'pages/ar';
+import This from 'pages/this';
+import Deluxe from 'pages/deluxe';
 
 const Router = () => {
   return <BrowserRouter>
@@ -12,11 +13,11 @@ const Router = () => {
       <Route component={Navigation} />
         <Switch>
           <Route exact path="/" render={() =>
-            <Redirect to="/ar" />
+            <Redirect to="/deluxe" />
           } />
-          <Route exact path="/ar" component={ConductAR} />
-          <Route exact path="/this" component={ConductThis} />
-          <Route exact path="/deluxe" component={ConductThis} />
+          <Route exact path="/ar" component={Ar} />
+          <Route exact path="/this" component={This} />
+          <Route exact path="/deluxe" component={Deluxe} />
         </Switch>
     </div>
   </BrowserRouter>

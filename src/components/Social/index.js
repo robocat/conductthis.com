@@ -12,7 +12,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 80px 0;
+  margin: 80px 0 0 0;
 `;
 
 const Row = styled.div`
@@ -75,17 +75,15 @@ const Social = ({ presskit }) => {
       <IconLink
         icon={{src: facebook, height: 36, width: 36}}
         url="https://facebook.com/conductthis"
-        text="facebook.com/conductthis" />
+        text="/conductthis" />
+      <IconLink
+        icon={{src: box, height: 37, width: 44}}
+        url={presskit}
+        text="Press Kit" />
       <IconLink
         icon={{src: email, height: 32, width: 44}}
         url="mailto:hey@northplay.co?subject=Conduct%20THIS"
         text="hey@northplay.co" />
-    </Row>
-    <Row>
-      <IconLink
-        icon={{src: box, height: 37, width: 44}}
-        url={presskit}
-        text="Download Press Kit" />
     </Row>
   </Container>
 };

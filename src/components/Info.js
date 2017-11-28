@@ -15,7 +15,7 @@ const Tagline = styled.div`
   font-family: "cubano";
   flex: 0 1 35%;
   font-size: 42pt;
-  line-height: 42pt;
+  line-height: 40pt;
   margin-right: 30px;
   text-align: right;
   
@@ -29,8 +29,8 @@ const Tagline = styled.div`
 const Description = styled.div`
   color: ${props => props.descriptionColor};
   flex: 1 1 50%;
-  font-size: 21px;
-  line-height: 28px;
+  font-size: 22px;
+  line-height: 27px;
   margin-left: 30px;
   
   @media (max-width: 800px) {
