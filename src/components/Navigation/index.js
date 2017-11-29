@@ -60,8 +60,25 @@ const Item = styled(Link)`
   }
   
   @media (max-width: 820px) {
-    flex: 1 1 100%;
+    flex: 0 1 25%;
     margin: 0 0 20px 0;
+    
+    & > div {
+      transform: scale(1.1, 1.1) translateY(10px);
+    }
+    
+    &:hover > div, &:hover > :nth-child(2), &:hover > :last-child {
+      transform: none;
+    }
+    
+    & > :nth-child(2) {
+      display: none;
+    }
+    
+    & > :last-child {
+      transform: scale(0.8, 0.8);
+      margin-top: -15px;
+    }
   }
 `;
 

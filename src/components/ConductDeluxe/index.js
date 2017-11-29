@@ -25,15 +25,16 @@ import full5 from './screen-full-5.jpg';
 const Coming = styled.div`
   display: flex;
   justify-content: center;
-  margin: 30px 0;
+  text-align: center;
+  ${'' /* margin: 30px 0; */}
 `;
 
 const ConductAR = () => {
   return <div>
-    <Video url="https://www.youtube.com/watch?v=veSWRCsnQqo" />
     <Coming>
-      <h1 style={{'font-family': 'Cubano, sans-serif'}}>Coming on December 5th, 2017</h1>
+      <h1 style={{'font-family': 'Cubano, sans-serif', 'line-height': '1.2em', 'font-size': '3em'}}>Coming December 5th, 2017</h1>
     </Coming>
+    <Video url="https://www.youtube.com/watch?v=veSWRCsnQqo" />
     <Download 
       appIcon={appIcon} 
       steamStoreUrl="http://store.steampowered.com/app/737870/Conduct_DELUXE/"/>
@@ -56,7 +57,6 @@ const ConductAR = () => {
         { preview: preview5, full: full5 },
       ]} />
       <Reviews reviews={[
-        { text: "Transport Tycoon on Red Bull", source: { name: "Apsfera" } },
       ]} />
       <Social presskit="https://www.dropbox.com/s/8jvd4eljdd2qva1/Conduct%20DELUXE%21%20Press%20Kit.zip?dl=1" />
   </div>;
