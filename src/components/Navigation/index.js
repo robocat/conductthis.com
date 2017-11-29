@@ -59,8 +59,9 @@ const Item = styled(Link)`
     opacity: ${props => props.isActive ? 1 : 0.3};
   }
   
-  @media (max-width: 420px) {
+  @media (max-width: 820px) {
     flex: 1 1 100%;
+    margin: 0 0 20px 0;
   }
 `;
 
@@ -85,7 +86,7 @@ const Wrapper = styled.div`
     margin: 0 10px;
   }
   
-  @media (max-width: 420px) {
+  @media (max-width: 820px) {
     flex-wrap: wrap;
   }
 `;
@@ -97,6 +98,12 @@ const Container = styled.div`
   background-position: top left;
   background-size: 1px 200px;
   transition: background 0.25s ease;
+  
+  ${'' /* @media (max-width: 820px) {
+    overflow-x: hidden;
+    position: relative;
+    height: 250px;
+  } */}
 `;
 
 const NavigationItem = ({location, path, activeImage, inactiveImage, tagline, platforms}) => {

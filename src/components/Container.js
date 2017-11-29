@@ -10,6 +10,10 @@ const Wrapper = styled.div`
   @media (max-width: 1100px) {
     margin: 0 10px;
   }
+  
+  @media (max-width: 820px) {
+    padding-top: 0;
+  }
 `;
 
 const Container = ({ children }) => {

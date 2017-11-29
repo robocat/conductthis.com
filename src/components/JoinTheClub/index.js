@@ -20,6 +20,10 @@ const Container = styled.div`
   @media (max-width: 880px) {
     flex-wrap: wrap;
   }
+  
+  @media (max-width: 320px) {
+    padding: 20px;
+  }
 `;
 
 const WhatIs = styled.div`
@@ -96,6 +100,10 @@ const Email = styled.input`
   @media (max-width: 420px) {
     padding: 15px 0;
   }
+  
+  @media (max-width: 320px) {
+    max-width: 160px;
+  }
 `;
 
 const Submit = styled.button`
@@ -112,6 +120,11 @@ const Submit = styled.button`
   
   @media (max-width: 420px) {
     width: 100px;
+  }
+  
+  @media (max-width: 320px) {
+    width: auto;
+    padding: 15.5px 10px;
   }
 `;
 

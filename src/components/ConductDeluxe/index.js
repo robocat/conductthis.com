@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Video from 'components/Video';
 import Download from 'components/Download';
@@ -21,12 +22,21 @@ import full3 from './screen-full-3.jpg';
 import full4 from './screen-full-4.jpg';
 import full5 from './screen-full-5.jpg';
 
+const Coming = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+`;
+
 const ConductAR = () => {
   return <div>
     <Video url="https://www.youtube.com/watch?v=veSWRCsnQqo" />
+    <Coming>
+      <h1 style={{'font-family': 'Cubano, sans-serif'}}>Coming on December 5th, 2017</h1>
+    </Coming>
     <Download 
       appIcon={appIcon} 
-      steamStoreUrl="https://itunes.apple.com/us/app/conduct-this/id1151455384?ls=1&mt=8&at=1010lwVg&ct=conductthis-site"/>
+      steamStoreUrl="http://store.steampowered.com/app/737870/Conduct_DELUXE/"/>
     <Info
       tagline="The Definitive Railroad Action"
       description={

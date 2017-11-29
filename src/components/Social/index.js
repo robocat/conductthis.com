@@ -21,7 +21,7 @@ const Row = styled.div`
   margin-bottom: 30px;
   width: 100%;
   
-  @media (max-width: 720px) {
+  @media (max-width: 768px) {
     flex-wrap: wrap;
     justify-content: center;
   }
