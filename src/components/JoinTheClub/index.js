@@ -90,19 +90,19 @@ const Email = styled.input`
   box-shadow: 0px 0px 20px 5px rgba(255, 234, 55, 0.4);
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  color: #333;
+  color: #2c47ad;
+  font-weight: 500;
   font-size: 18px;
-  font-weight: 400;
   line-height: 18px;
   outline: none;
   padding: 15px;
   
   @media (max-width: 420px) {
-    padding: 15px 0;
+    max-width: 160px;
   }
   
   @media (max-width: 320px) {
-    max-width: 160px;
+    max-width: 120px;
   }
 `;
 

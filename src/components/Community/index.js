@@ -38,6 +38,7 @@ const Embed = styled.div`
   flex: 0 1 45%;
   display: flex;
   justify-content: center;
+  overflow: hidden;
   
   &:first-child {
     margin-bottom: 40px;
