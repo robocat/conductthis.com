@@ -15,6 +15,10 @@ const Container = styled.div`
     max-width: 800px;
     padding: 0 10px;
   }
+  
+  @media (max-width: 420px) {
+    margin: 40px 0;
+  }
 `;
 
 const Preview = styled.div`

@@ -13,6 +13,10 @@ const Container = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   margin: 80px 0 0 0;
+  
+  @media (max-width: 420px) {
+    margin: 40px 0;
+  }
 `;
 
 const Row = styled.div`
