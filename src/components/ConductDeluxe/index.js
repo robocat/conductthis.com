@@ -32,7 +32,7 @@ const Coming = styled.div`
 const ConductAR = () => {
   return <div>
     <Coming>
-      <h1 style={{'font-family': 'Cubano, sans-serif', 'line-height': '1.2em', 'font-size': '3em'}}>Coming December 5th, 2017</h1>
+      <h1 style={{'fontFamily': 'Cubano, sans-serif', 'lineHeight': '1.2em', 'fontSize': '3em'}}>Coming December 5th, 2017</h1>
     </Coming>
     <Video url="https://www.youtube.com/watch?v=veSWRCsnQqo" />
     <Download 
