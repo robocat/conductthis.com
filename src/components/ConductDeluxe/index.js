@@ -44,7 +44,7 @@ const ConductAR = () => {
         <span>
           Conduct DELUXE! is an addictive game of explosive railway action that will challenge your inner conductor. Set in a stunning world, with incredibly simple controls you race against time to bring passengers safely to their destination by commanding trains, switching tracks and avoiding collisions in increasingly challenging action-puzzles.
           <br /><br />
-          This is the definitive edition, reimagined for your computer. With all new visuals, content and a level editor!
+          This is the definitive edition, reimagined for your computer. With all new visuals, content and a level editor!
         </span>
       }
       descriptionColor="#34cdfd" />
