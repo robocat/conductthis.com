@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   z-index: -1;
   
   @media (max-width: 620px) {
-    margin-top: -300px;
+    margin-top: -250px;
   }
 `;
 
