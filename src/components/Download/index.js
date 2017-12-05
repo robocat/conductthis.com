@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import playStoreImage from './play.png';
 import appStoreImage from './appstore.png';
-import steamStoreImage from './wishlist.png';
+import steamStoreImage from './steam.png';
 
 const Container = styled.div`
   align-items: center;

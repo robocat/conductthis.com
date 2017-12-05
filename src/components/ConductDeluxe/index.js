@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Video from 'components/Video';
 import Download from 'components/Download';
@@ -22,18 +21,8 @@ import full3 from './screen-full-3.jpg';
 import full4 from './screen-full-4.jpg';
 import full5 from './screen-full-5.jpg';
 
-const Coming = styled.div`
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  ${'' /* margin: 30px 0; */}
-`;
-
 const ConductAR = () => {
   return <div>
-    <Coming>
-      <h1 style={{'fontFamily': 'Cubano, sans-serif', 'lineHeight': '1.2em', 'fontSize': '3em'}}>Arrives December 5th, 2017</h1>
-    </Coming>
     <Video url="https://www.youtube.com/watch?v=veSWRCsnQqo" />
     <Download 
       appIcon={appIcon} 
