@@ -173,6 +173,7 @@ const Navigation = ({ match, location }) => {
     '/ar': {color: '#240e00', image: caGradient},
     '/this': {color: '#101b05', image: ctGradient},
     '/deluxe': {color: '#141519', image: cdGradient},
+    '/privacy': {color: '#000', image: null},
   };
   
   return <Container background={background[location.pathname]}>
