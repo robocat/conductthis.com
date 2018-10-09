@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import masStoreImage from './mas.png';
 import playStoreImage from './play.png';
 import appStoreImage from './appstore.png';
 import steamStoreImage from './steam.png';
@@ -48,9 +49,10 @@ const AppIcon = styled.img`
   }
 `
 
-const Download = ({ playStoreUrl, appStoreUrl, steamStoreUrl, appIcon }) => {
+const Download = ({ masStoreUrl, playStoreUrl, appStoreUrl, steamStoreUrl, appIcon }) => {
   return <Container>
     <AppIcon src={appIcon} alt="App Icon" />
+    {masStoreUrl && <StoreButton href={masStoreUrl} image={masStoreImage} target="_blank" />}
     {playStoreUrl && <StoreButton href={playStoreUrl} image={playStoreImage} target="_blank" />}
     {appStoreUrl && <StoreButton href={appStoreUrl} image={appStoreImage} target="_blank" />}
     {steamStoreUrl && <StoreButton href={steamStoreUrl} image={steamStoreImage} target="_blank" />}
@@ -58,6 +60,7 @@ const Download = ({ playStoreUrl, appStoreUrl, steamStoreUrl, appIcon }) => {
 };
 
 Download.propTypes = {
+  masStoreUrl: PropTypes.string,
   appStoreUrl: PropTypes.string,
   playStoreUrl: PropTypes.string,
   steamStoreUrl: PropTypes.string,

@@ -25,7 +25,8 @@ const ConductAR = () => {
   return <div>
     <Video url="https://www.youtube.com/watch?v=veSWRCsnQqo" />
     <Download 
-      appIcon={appIcon} 
+      appIcon={appIcon}
+      masStoreUrl="https://itunes.apple.com/us/app/conduct-deluxe/id1436164402?ls=1&mt=12&at=1010lwVg&ct=conductthis-site" 
       steamStoreUrl="http://store.steampowered.com/app/737870/Conduct_DELUXE/"/>
     <Info
       tagline="The Definitive Railroad Action"
