@@ -25,7 +25,7 @@ const ConductAR = () => {
       <Video url="https://www.youtube.com/watch?v=9QQt83vyqLI" />
       <Download
         available="Available december 6th"
-        switchStoreUrl="https://itunes.apple.com/us/app/conduct-deluxe/id1436164402?ls=1&mt=12&at=1010lwVg&ct=conductthis-site"
+        switchStoreUrl="#"
       />
       <Info
         tagline="The Party Railroad Game"

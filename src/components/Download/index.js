@@ -95,7 +95,7 @@ const Download = ({
         <StoreButton
           href={switchStoreUrl}
           image={switchStoreImage}
-          target="_blank"
+          // target="_blank"
         />
       )}
     </Container>
