@@ -24,8 +24,7 @@ const ConductAR = () => {
     <div>
       <Video url="https://www.youtube.com/watch?v=9QQt83vyqLI" />
       <Download
-        available="Available december 6th"
-        switchStoreUrl="#"
+        switchStoreUrl="https://www.nintendo.co.uk/Games/Nintendo-Switch-download-software/Conduct-TOGETHER--1481770.html"
       />
       <Info
         tagline="The Party Railroad Game"
