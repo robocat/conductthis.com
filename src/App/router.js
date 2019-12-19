@@ -8,6 +8,7 @@ import This from "pages/this";
 import Deluxe from "pages/deluxe";
 import Together from "pages/together";
 import Privacy from "pages/privacy";
+import Terms from "pages/terms";
 
 const Router = () => {
   return (
@@ -21,6 +22,7 @@ const Router = () => {
           <Route exact path="/deluxe" component={Deluxe} />
           <Route exact path="/together" component={Together} />
           <Route exact path="/privacy" component={Privacy} />
+          <Route exact path="/terms" component={Terms} />
         </Switch>
       </div>
     </BrowserRouter>

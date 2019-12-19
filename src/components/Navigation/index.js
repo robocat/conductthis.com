@@ -193,7 +193,8 @@ const Navigation = ({ match, location }) => {
     "/this": { color: "#101b05", image: ctGradient },
     "/deluxe": { color: "#141519", image: cdGradient },
     "/together": { color: "#141519", image: cnGradient },
-    "/privacy": { color: "#000", image: null }
+    "/privacy": { color: "#000", image: null },
+    "/terms": { color: "#000", image: null },
   };
 
   return (
