@@ -224,14 +224,14 @@ const Navigation = ({ match, location }) => {
           inactiveImage={cdInactive}
           location={location}
         />
-        <NavigationItem
+        {/* <NavigationItem
           path="/together"
           platforms={["switch"]}
           tagline="The party game"
           activeImage={cnActive}
           inactiveImage={cnInactive}
           location={location}
-        />
+        /> */}
       </Wrapper>
     </Container>
   );

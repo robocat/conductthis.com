@@ -12,8 +12,9 @@ const ConductTHIS = () => {
   return <StyledWrapper>
     <Container>
       <div style={{fontSize: '1.1em', lineHeight: '1.3em'}}>
-        <h1>CONDUCT DELUXE PRIVACY POLICY</h1>
-        <p>Last Revised: September 14, 2018</p>
+        <h1>PRIVACY POLICY</h1>
+        <p>Last Revised: May 05, 2020</p>
+        <p>This privacy policy apples to all games published by Northplay in the Conduct series.</p>
         <p>Our privacy policy applies to information we collect when you use or access our website, application, or just interact with us. We may change this privacy policy from time to time. Whenever we make changes to this privacy policy, the changes are effective <strong>30 days</strong> after we post the revised privacy policy (as indicated by revising the date at the top of our privacy policy). We encourage you to review our privacy policy whenever you access our services to stay informed about our information practices and the ways you can help protect your privacy.</p>
 
         <h2>Collection of Information</h2>
