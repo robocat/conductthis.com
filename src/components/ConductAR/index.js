@@ -26,7 +26,8 @@ const ConductAR = () => {
     <Video url="https://www.youtube.com/watch?v=qECJSCVyx8I" />
     <Download 
       appIcon={appIcon} 
-      appStoreUrl="https://itunes.apple.com/us/app/conduct-ar/id1256506674?ls=1&mt=8&at=1010lwVg&ct=conductthis-site" />
+      appStoreUrl="https://itunes.apple.com/us/app/conduct-ar/id1256506674?ls=1&mt=8&at=1010lwVg&ct=conductthis-site"
+      playStoreUrl="https://play.google.com/store/apps/details?id=com.Northplay.ConductAR" />
     <Info
       tagline="Explosive Augmented Reality Action"
       description={
